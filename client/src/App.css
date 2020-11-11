@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+:root {
+  --income: rgb(3, 165, 3);
+  --expense: rgb(212, 11, 11);
+  --border: 1px solid rgb(214, 212, 212);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+.Balance h1 {
+  margin-top: 0;
+}
+.Balance h4 {
+  margin-bottom: 0;
+}
+
+.IncomeExpense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff;
+  padding: 25px 55px;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+}
+
+.IncomeExpense div {
+  text-align: center;
+}
+
+.IncomeExpense div:first-child {
+  padding-right: 40px;
+  border-right: 1px solid rgb(214, 212, 212);
+}
+
+.IncomeExpense div h4,
+.IncomeExpense div p {
+  margin: 0;
+}
+
+.income {
+  color: var(--income);
+  font-size: 20px;
+  padding: 2px;
+}
+.expense {
+  color: var(--expense);
+  font-size: 20px;
+  padding: 2px;
+}
+
+.TransactionHistory h3,
+.AddTransaction h3 {
+  margin-bottom: 2px;
+  margin-top: 40px;
+}
+
+.TransactionHistory div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 2px 10px;
+  height: 40px;
+  margin-bottom: 3px;
+}
+
+.TransactionHistory .icon {
+  position: absolute;
+  height: 20px;
+  left: -25px;
+  color: white;
+  background-color: rgb(212, 11, 11);
+  padding: 1px 5px;
+  font-size: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.TransactionHistory div:hover .icon {
+  opacity: 1;
+}
+
+.amountplus {
+  border-right: 5px solid var(--income) !important;
+}
+.amountminus {
+  border-right: 5px solid var(--expense) !important;
+}
+
+.AddTransaction p {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.AddTransaction input {
+  padding: 10px 10px;
+  width: 90%;
+  border: var(--border);
+  font-size: 16px;
+}
+
+.AddTransaction button {
+  padding: 10px;
+  width: 97%;
+  text-align: center;
+  background-color: #9c88ff;
+  color: #ffff;
+  border: none;
+  box-shadow: var(--box-shadow);
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.AddTransaction button:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 300px;
+  }
+  .IncomeExpense div:first-child {
+    padding-right: 20px;
+  }
+}
